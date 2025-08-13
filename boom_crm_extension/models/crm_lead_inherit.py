@@ -34,11 +34,6 @@ class CrmLead(models.Model):
                 rec.x_duration_since_approved = 0
 
     def action_approve_lead(self):
-        """Marca el lead como aprobado por el usuario actual y registra fechas.
-        - x_approved_by = usuario actual
-        - x_approved_date = hoy
-        - x_delivery_deadline = hoy (según requerimiento del PDF)
-        """
         today = fields.Date.context_today(self)
         for rec in self:
             rec.write({

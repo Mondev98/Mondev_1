@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <data noupdate="1">
+    <data>
         <record id="crm_lead_demo_boom_1" model="crm.lead">
             <field name="name">Fibra óptica residencial - Zona Norte</field>
-            <field name="type">opportunity</field>
+              <field name="type">opportunity</field>
             <field name="x_lead_category">residencial</field>
+            <field name="user_id" ref="base.user_admin"/>
             <field name="x_delivery_deadline">2025-08-13</field>
             <field name="x_approved_by" ref="base.user_admin"/>
             <field name="x_approved_date">2025-08-13</field>
@@ -17,11 +18,26 @@
         <record id="crm_lead_demo_boom_2" model="crm.lead">
             <field name="name">Enlace dedicado empresarial - Parque Industrial</field>
             <field name="type">opportunity</field>
+            <field name="user_id" ref="base.user_admin"/>
             <field name="x_lead_category">empresarial</field>
             <field name="x_delivery_deadline">2025-08-13</field>
             <field name="x_installation_required">False</field>
             <field name="x_contract_reference">CTR-EMP-0456</field>
             <field name="x_support_required">True</field>
+        </record>
+
+         <record id="crm_lead_demo_boom_3" model="crm.lead">
+            <field name="name">Fibra óptica residencial - Zona Sur</field>
+            <field name="type">opportunity</field>
+            <field name="x_lead_category">residencial</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="x_delivery_deadline">2025-07-13</field>
+            <field name="x_approved_by" ref="base.user_admin"/>
+            <field name="x_approved_date">2025-06-13</field>
+            <field name="x_installation_required">True</field>
+            <field name="x_installation_date">2025-06-13</field>
+            <field name="x_contract_reference">CTR-RES-0001</field>
+            <field name="x_support_required">False</field>
         </record>
     </data>
 </odoo>
